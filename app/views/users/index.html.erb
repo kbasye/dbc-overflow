@@ -1,0 +1,21 @@
+<h1>Sign Up</h1>
+
+
+
+<%= form_for @user do |f| %>
+  <%= f.text_field :username %><br>
+  <%= f.text_field :email %><br>
+  <%= f.password_field :password %><br>
+
+  <%= f.submit "Sign Up" %>
+<% end %>
+
+<h1>Log On</h1>
+
+<%= form_for(:session, url: sessions_path) do |f| %>
+  <%= f.text_field :username %><br>
+  <%= f.password_field :password %><br>
+
+  <%= f.submit "Log On" %>
+<% end %>
+
